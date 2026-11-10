@@ -9,7 +9,7 @@ nav{display:flex;align-items:center;gap:34px}nav a{font-size:.88rem;font-weight:
 nav a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--orange);transition:width .25s}
 nav a:hover,nav a.active{color:var(--blue)}nav a:hover:after,nav a.active:after{width:100%}
 .hero{min-height:620px;height:min(78vh,780px);position:relative;display:flex;align-items:center;padding:7%;color:white;background:#29465a center/cover;overflow:hidden}
-.hero-region{background-image:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85")}
+.hero-region{background-image:url("images/grand-est-evidenziata-in-rosso-nella-mappa-della-francia-2c3744e.jpg")}
 .hero-heritage{background-image:url("images/strasburgo.jpg")}
 .hero-food{background-image:url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=2000&q=85")}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,28,48,.84),rgba(13,28,48,.4) 62%,rgba(13,28,48,.1))}
