@@ -45,3 +45,19 @@ strong.key{color:var(--blue);font-weight:800}
 footer{min-height:90px;padding:22px 7%;display:flex;align-items:center;justify-content:space-between;gap:20px}footer p{color:var(--muted);font-size:.78rem;margin:0}.back-top{font-size:.8rem;font-weight:700}
 @media(max-width:760px){.site-header{padding:15px 6%;min-height:unset;align-items:flex-start;gap:10px;flex-direction:column}nav{gap:18px;flex-wrap:wrap}nav a{font-size:.8rem}.hero{min-height:570px;height:auto;padding:85px 7%}.hero-note{left:7%;right:auto;font-size:.58rem}.section{padding:75px 7%}.intro-grid,.content-grid,.food-heading{grid-template-columns:1fr;gap:18px}.facts{margin-top:40px}.facts strong{font-size:1.25rem}.feature-image{min-height:320px;box-shadow:9px 9px 0 #f0e9dd}.food-grid{grid-template-columns:1fr;gap:18px}.food-photo{height:240px}footer{align-items:flex-start;flex-direction:column;padding:28px 7%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Transizione fluida tra le pagine (browser compatibili con View Transitions) */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:page-leave .28s ease both}
+::view-transition-new(root){animation:page-enter .42s cubic-bezier(.22,.8,.25,1) both}
+@keyframes page-enter{
+  from{opacity:0;transform:translateY(10px) scale(.995);filter:blur(3px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+@keyframes page-leave{
+  from{opacity:1;transform:translateY(0)}
+  to{opacity:0;transform:translateY(-5px)}
+}
+@media(prefers-reduced-motion:reduce){
+  ::view-transition-old(root),::view-transition-new(root){animation:none}
+}
